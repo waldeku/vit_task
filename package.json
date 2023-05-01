@@ -2,6 +2,7 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://waldeku.github.io/vit_task",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -16,6 +17,7 @@
     "chart.js": "^4.2.1",
     "chartjs-adapter-moment": "^1.0.1",
     "chartjs-plugin-zoom": "^2.0.1",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-charts": "^3.0.0-beta.54",
@@ -29,6 +31,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
