@@ -14,7 +14,7 @@ import zoomPlugin from "chartjs-plugin-zoom";
 
 import { Option, ChartDataItemDTO } from "types";
 import Title from "components/Title";
-import { Icon } from "./CompanyChart.styled";
+import { Icon, Wrapper } from "./CompanyChart.styled";
 import { options } from "./CompanyChart.utils";
 import { theme } from "theme";
 
@@ -73,7 +73,9 @@ const CompanyChart = ({ selectedCompany }: CompanyChartProps) => {
           <Title text={getStatusText()} />
         </>
       ) : (
-        <Line data={chartData} options={options} />
+        <Wrapper>
+          <Line data={chartData} options={options} />
+        </Wrapper>
       )}
     </>
   );
